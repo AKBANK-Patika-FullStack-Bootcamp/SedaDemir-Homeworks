@@ -18,11 +18,11 @@
 
 ### Add customer
 
-![Postman post request](./post_add_customer.png)
+![Postman post request](./add_customer.png)
 
 ### Update customer
 
-![Postman update request](./put_update_customer.png)
+![Postman update request](./update_customer.png)
 
 ### Delete customer
 
