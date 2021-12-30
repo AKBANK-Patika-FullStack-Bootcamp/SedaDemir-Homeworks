@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{7BC100D7-8323-46F7-99A4-7A58725DBDE7}|Default">
+  <MonoDevelop.Ide.ItemProperties.CustomersWebAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CustomersWebAPI/Controllers/CustomersController.cs">
+    <Files>
+      <File FileName="CustomersWebAPI/Customer.cs" Line="16" Column="1" />
+      <File FileName="CustomersWebAPI/WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="CustomersWebAPI/Program.cs" Line="23" Column="1" />
+      <File FileName="CustomersWebAPI/Controllers/CustomersController.cs" Line="71" Column="33" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CustomersWebAPI" expanded="True">
+            <Node name="CustomersWebAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
