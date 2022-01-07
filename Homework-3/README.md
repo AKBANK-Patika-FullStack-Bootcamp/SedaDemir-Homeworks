@@ -54,11 +54,10 @@
 
 ![select](img/customers-table-columns.png)
 
-1. ### Insert rows
-
-   -- Insert rows into table 'Customers'
+3. ### Insert rows
 
 ```
+    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
 
    ([FirstName], [LastName], [Email])
