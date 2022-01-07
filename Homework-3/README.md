@@ -55,24 +55,23 @@
 
    -- Insert rows into table 'Customers'
 
-   <code>INSERT INTO dbo.Customers
+```
+   INSERT INTO dbo.Customers
    ([FirstName], [LastName], [Email])
    VALUES
    ( N'Orlando', N'Bloom', N'orlando@adventure-works.com'),
    ( N'Keith', N'Stack', N'keith0@adventure-works.com'),
    ( N'Donna', N'Harley', N'donna0@adventure-works.com'),
    ( N'Janet', N'Cooper', N'janet1@adventure-works.com')
-   </code>
 
-   <code>GO</code>
+  GO
+```
 
 4. ### View the data returned by a query
 
    -- Select rows from table 'Customers'
 
-```
    <code>SELECT TOP (1000) \* FROM dbo.Customers;</code>
-```
 
 ![select](img/select-customers.png)
 
