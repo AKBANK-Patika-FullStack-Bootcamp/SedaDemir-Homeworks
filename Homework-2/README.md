@@ -1,6 +1,6 @@
-# CustomersWebAPI project
+# Assignment - Week 2
 
-## Requests via Postman
+## Requests via Postman for CustomersWebAPI project
 
 1. Get Request => Get all customers
 2. Get Request by id => Get customer by id
