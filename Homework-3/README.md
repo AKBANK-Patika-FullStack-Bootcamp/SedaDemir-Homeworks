@@ -2,7 +2,7 @@
 
 1. Serbest konulu seçilen Web API için database yaratmak, log ve diğer modeller için bir tablo oluşturmak
 
-2. SQL de yarattılan veritabanın .bak uzantılı dosyasını yüklemek
+2. SQL de yaratılan veritabanın .bak uzantılı dosyasını yüklemek
 
 ## Create a Database on SQL Server using Azure Data Studio
 
@@ -56,11 +56,17 @@
    -- Insert rows into table 'Customers'
 
    <code>INSERT INTO dbo.Customers
+
    ([FirstName], [LastName], [Email])
+
    VALUES
+
    ( N'Orlando', N'Bloom', N'orlando@adventure-works.com'),
+
    ( N'Keith', N'Stack', N'keith0@adventure-works.com'),
+
    ( N'Donna', N'Harley', N'donna0@adventure-works.com'),
+
    ( N'Janet', N'Cooper', N'janet1@adventure-works.com')
    </code>
 
