@@ -74,9 +74,10 @@
 
 4. ### View the data returned by a query
 
+```
    -- Select rows from table 'Customers'
-
-<code>SELECT TOP (1000) \* FROM dbo.Customers;</code>
+   SELECT TOP (1000) \* FROM dbo.Customers;
+```
 
 ![select](img/select-customers.png)
 
