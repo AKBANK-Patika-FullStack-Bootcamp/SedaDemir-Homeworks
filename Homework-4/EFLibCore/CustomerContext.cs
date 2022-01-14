@@ -20,7 +20,7 @@ namespace EFLibCore
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             //options.UseSqlServer(Configuration.GetConnectionString("UserDBEntities"));
-            options.UseSqlServer("Server = localhost,1431\\Catalog=WALLETDB;Database = WALLETDB;User=sa;Password=Seda1234;TrustServerCertificate=true");
+            options.UseSqlServer("Server = localhost,1431\\Catalog=WALLETDB;Database = WALLETDB;User=sa;Password=<YourP@$$word>;TrustServerCertificate=true");
 
 
 
