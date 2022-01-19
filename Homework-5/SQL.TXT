@@ -1,0 +1,97 @@
+USE master
+
+IF NOT EXISTS (
+SELECT name
+FROM sys.databases
+WHERE name = N'CurrencyDB'
+) CREATE DATABASE [CurrencyDB];
+
+IF SERVERPROPERTY('ProductVersion') > '12'
+ALTER DATABASE [CurrencyDB] SET QUERY_STORE=ON;
+
+GO
+
+
+IF OBJECT_ID('dbo.Favorites', 'U') IS NOT NULL DROP TABLE dbo.Favorites;
+IF OBJECT_ID('dbo.APIAuthority', 'U') IS NOT NULL DROP TABLE dbo.APIAuthority;
+IF OBJECT_ID('dbo.Currency', 'U') IS NOT NULL DROP TABLE dbo.Currency;
+IF OBJECT_ID('dbo.Customer', 'U') IS NOT NULL DROP TABLE dbo.Customer;
+
+
+CREATE TABLE dbo.Customer
+(
+CustomerId int IDENTITY(1,1) NOT NULL PRIMARY KEY, -- primary key column, auto incremented
+FirstName nvarchar(50) NOT NULL,
+LastName nvarchar(50) NOT NULL,
+Email nvarchar(50) NOT NULL
+)
+
+CREATE TABLE Currency (
+CurrencyId INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Code  NVARCHAR(3) NOT NULL,
+Name NVARCHAR(50) NOT NULL,
+Symbol NVARCHAR(20) NOT NULL, 
+)
+
+CREATE TABLE Favorites (
+FavId INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+CurrencyId INT FOREIGN KEY REFERENCES dbo.Currency(CurrencyId),
+CustomerId INT FOREIGN KEY REFERENCES dbo.Customer(CustomerId)
+)
+
+CREATE TABLE dbo.APIAuthority
+(
+Id INT IDENTITY(1,1) NOT NULL PRIMARY Key,
+Email nvarchar(50) NOT NULL,
+Password nvarchar(50) NULL,
+Admin BIT NULL
+)
+
+
+INSERT INTO dbo.Customer
+
+([FirstName], [LastName])
+
+VALUES
+
+( N'Orlando', N'Bloom'),
+( N'Keith', N'Stack'),
+( N'Donna', N'Harley'),
+( N'Janet', N'Cooper')
+
+
+INSERT INTO dbo.Currency
+
+([Code], [Name], [Symbol])
+
+VALUES
+
+( N'TR', N'Turkish Lira', N'₺'),
+( N'EUR', N'Euro', N'€'),
+( N'GBP', N'Pounds sterling', N'£'),
+( N'USD', N'US dollar', N'$'),
+( N'CZK', N'Czech koruna', N'Kč'),
+( N'KES', N'Kenyan shilling', N'Ksh'),
+( N'ZAR', N'South Africa', N'R')
+
+
+INSERT INTO dbo.Favorites
+
+([CurrencyId], [CustomerId])
+
+VALUES
+
+('5', '4'),
+('2', '4'),
+('3', '4')
+
+
+INSERT INTO dbo.APIAuthority
+
+([Email], [Password], [CustomerId])
+
+VALUES
+
+('orlando@adventure-works.com', '123'),
+('keith0@adventure-works.com', '123'),
+('donna0@adventure-works.com', '123')
