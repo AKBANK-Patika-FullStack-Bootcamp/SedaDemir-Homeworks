@@ -1,6 +1,6 @@
 # Adding in Authentication to EntityFramework Web API Project
 
-### Create new login record and hash customer password with MD5
+### 1. Create new login record and hash customer password with MD5
 
 **APIAuthority Table Before**
 
@@ -14,7 +14,7 @@
 
 ![Auth-Table-After](./img/apiAuth-Table-After.png)
 
-### Login Customer
+### 2. Login Customer
 
 **Select Bearer Token on Postman Authorization**
 
