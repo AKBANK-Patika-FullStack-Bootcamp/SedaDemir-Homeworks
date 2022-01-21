@@ -18,7 +18,7 @@
 
 ### Select Bearer Token on Postman Authorization
 
-![Token](./img/bearer_token.pngimg/bearer_token.png)
+![Token](./img/bearer_token.png)
 
 ### Login Failed
 
