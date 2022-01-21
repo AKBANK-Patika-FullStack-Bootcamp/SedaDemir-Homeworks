@@ -27,3 +27,13 @@
 ### 2.3. Successful login for customer
 
 ![Login-Success](./img/login_success.png)
+
+## 3. Get Customers Request with Auth
+
+### 3.1 Get Customers Request and Unauthorized Response
+
+![UnauthorizedGet](./img/no_auth_get_customers.png)
+
+### 3.2 Response OK with Bearer Token Auth for Get Customers (Customers shown by Last Name in Ascending Order)
+
+![AuthorizedGet](./img/auth_get_customers.png)

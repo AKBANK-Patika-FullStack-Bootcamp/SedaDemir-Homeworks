@@ -5,25 +5,26 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CustomersWebAPI.Controllers
 {
-[ApiController]
-[Route("api/[controller]")]
+    [ApiController]
+    [Route("[controller]")]
     public class CustomersOperationsController : ControllerBase
     {
         List<Customer> customerList = new List<Customer>();
         Result _result = new Result();
-
+        //Create an instance of DBOperations
         DBOperations dbOperation = new DBOperations();
 
-        [Authorize]
 
-        // GET: api/customers
+
+        // GET all customers in Customers Table
+        [Authorize]
         [HttpGet]
         public List<Customer> GetCustomers()
         {
             return dbOperation.GetCustomers();
         }
 
-        // GET by id: api/customers/1
+        // GET a customer by CustomerId in Customers Table
         [HttpGet("{Id}")]
         public Customer GetCustomer(int Id)
         {
@@ -35,17 +36,17 @@ namespace CustomersWebAPI.Controllers
         }
 
 
-        // POST: api/customers
+        // POST: Insert a customer into Customers Table
         [HttpPost]
         public Result AddCustomer(Customer newCustomer)
         {
             Customer customer = dbOperation.FindCustomer(newCustomer.FirstName, newCustomer.LastName);
-            //Yeni eleman listede var m? ? 
+            //Check if new customer already exists
             bool userCheck = (customer != null) ? true : false;
 
             if (userCheck == false)
             {
-                //Listeye yeni eleman ekleniyor.
+                //Add new customer
                 if (dbOperation.AddModel(newCustomer) == true)
                 {
                     _result.status = 1;
@@ -68,9 +69,10 @@ namespace CustomersWebAPI.Controllers
 
         }
 
-        // PUT: api/customers/5
+        // PUT: Update a customer using its CustomerId 
         [HttpPut("{Id}")]
-        public Result UpdateCustomer(int Id, Customer newValue){
+        public Result UpdateCustomer(int Id, Customer newValue)
+        {
 
             Result _result = new();
 
@@ -92,13 +94,13 @@ namespace CustomersWebAPI.Controllers
             return _result;
         }
 
-        // DELETE api/customer/2
+        // DELETE: Delete a customer using CustomerId
         [HttpDelete("{Id}")]
         public Result DeleteCustomer(int Id)
         {
             Result _result = new();
 
-            //Search customer to be deleted
+            //Search customerId
             if (dbOperation.DeleteModel(Id))
             {
                 _result.status = 1;

@@ -40,8 +40,9 @@ namespace CustomersWebAPI.Controllers
         public List<Customer> GetCustomers()
         {
             List<Customer> customers = new List<Customer>();
-            customers = _context.Customer.ToList();
-            customers.OrderBy(x => x.LastName).ToList(); ;
+            customers = _context.Customer.OrderBy(x => x.LastName).ToList();
+            //Order customers by Last Name
+            
 
             return customers;
         }
