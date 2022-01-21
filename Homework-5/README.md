@@ -1,4 +1,4 @@
-# Adding in Authentication to EntityFramework Web API Project
+# Adding in Authorization to EntityFramework Web API Project
 
 ## 1. Create new login record and hash customer password with MD5
 
