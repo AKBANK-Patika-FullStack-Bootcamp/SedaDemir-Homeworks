@@ -1,5 +1,5 @@
 ﻿using DAL.Model;
-using EFLibCore;
+using Entities;
 
 namespace CustomersWebAPI.Controllers
 {

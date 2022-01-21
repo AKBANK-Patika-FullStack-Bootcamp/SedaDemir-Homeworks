@@ -1,17 +1,3 @@
-USE master
-
-IF NOT EXISTS (
-SELECT name
-FROM sys.databases
-WHERE name = N'CurrencyDB'
-) CREATE DATABASE [CurrencyDB];
-
-IF SERVERPROPERTY('ProductVersion') > '12'
-ALTER DATABASE [CurrencyDB] SET QUERY_STORE=ON;
-
-GO
-
-
 IF OBJECT_ID('dbo.Favorites', 'U') IS NOT NULL DROP TABLE dbo.Favorites;
 IF OBJECT_ID('dbo.APIAuthority', 'U') IS NOT NULL DROP TABLE dbo.APIAuthority;
 IF OBJECT_ID('dbo.Currency', 'U') IS NOT NULL DROP TABLE dbo.Currency;
@@ -43,21 +29,21 @@ CREATE TABLE dbo.APIAuthority
 (
 Id INT IDENTITY(1,1) NOT NULL PRIMARY Key,
 Email nvarchar(50) NOT NULL,
-Password nvarchar(50) NULL,
+Password nvarchar(max) NULL,
 Admin BIT NULL
 )
 
 
 INSERT INTO dbo.Customer
 
-([FirstName], [LastName])
+([FirstName], [LastName], [Email])
 
 VALUES
 
-( N'Orlando', N'Bloom'),
-( N'Keith', N'Stack'),
-( N'Donna', N'Harley'),
-( N'Janet', N'Cooper')
+( N'Orlando', N'Bloom','orlando@adventure-works.com' ),
+( N'Keith', N'Stack', 'keith0@adventure-works.com'),
+( N'Donna', N'Harley', 'donna0@adventure-works.com'),
+( N'Janet', N'Cooper', 'janet@adventure-works.com')
 
 
 INSERT INTO dbo.Currency
@@ -88,7 +74,7 @@ VALUES
 
 INSERT INTO dbo.APIAuthority
 
-([Email], [Password], [CustomerId])
+([Email], [Password])
 
 VALUES
 

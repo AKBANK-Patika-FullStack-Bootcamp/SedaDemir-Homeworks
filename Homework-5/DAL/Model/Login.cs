@@ -4,7 +4,7 @@ namespace DAL.Model
 {
     public class Login
     {
-        public string Email { get; set; } 
+        public string Email { get; set; } = string.Empty;
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
 
@@ -21,7 +21,8 @@ namespace DAL.Model
         public int Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        
+        public bool Admin { get; set; }
+
     }
 }
 
