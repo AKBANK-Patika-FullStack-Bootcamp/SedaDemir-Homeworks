@@ -15,16 +15,34 @@ namespace CustomersWebAPI.Controllers
         DBOperations dbOperation = new DBOperations();
 
 
-
-        // GET all customers in Customers Table
         [Authorize]
+        // GET all customers in Customers Table
         [HttpGet]
         public List<Customer> GetCustomers()
         {
             return dbOperation.GetCustomers();
         }
 
-        // GET a customer by CustomerId in Customers Table
+        [Authorize]
+        //Get customers in smaller chunks
+        [HttpGet("/CustomersOperations/customers")]
+        public IActionResult GetCustomersPaging([FromQuery] Paging paging)
+        {
+            
+            paging.PageNumber = 0;
+            paging.PageSize = 3;
+
+            var owners = dbOperation.GetCustomers() 
+                                               
+           .Skip(paging.PageNumber) // Which page ? Every page contains #"paging.pageSize" customers
+           .Take(paging.PageSize) // How many customers ?
+           .ToList();
+
+
+            return Ok(owners);
+        }
+
+        // GET a customer by CustomerId  Customers Table
         [HttpGet("{Id}")]
         public Customer GetCustomer(int Id)
         {

@@ -37,3 +37,9 @@
 ### 3.2 Response OK with Bearer Token Auth for Get Customers (Customers shown by Last Name in Ascending Order)
 
 ![AuthorizedGet](./img/auth_get_customers.png)
+
+## 4. Paging
+
+### 4.1 Get small chunks of customer data
+
+![Paging](./img/Paging.png)

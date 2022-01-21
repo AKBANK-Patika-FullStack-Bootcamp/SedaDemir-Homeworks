@@ -8,7 +8,7 @@ namespace CustomersWebAPI.Controllers
         private CustomerContext _context = new CustomerContext();
         LoggerCls logger = new LoggerCls();
 
-        #region CUSTOMER FONKS..
+        #region CUSTOMER FUNCTIONS...
         public bool AddModel(Customer _customer)
         {
             try
@@ -73,7 +73,7 @@ namespace CustomersWebAPI.Controllers
         #endregion
 
 
-        #region TOKEN FONKS..
+        #region TOKEN FUNCTIONS...
         public void CreateLogin(APIAuthority loginCustomer)
         {
             _context.APIAuthority.Add(loginCustomer);
