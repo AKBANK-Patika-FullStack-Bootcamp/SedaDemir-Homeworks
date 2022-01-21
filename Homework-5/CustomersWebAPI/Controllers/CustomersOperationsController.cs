@@ -29,8 +29,8 @@ namespace CustomersWebAPI.Controllers
         public IActionResult GetCustomersPaging([FromQuery] Paging paging)
         {
             
-            paging.PageNumber = 0;
-            paging.PageSize = 3;
+            //paging.PageNumber = 0;
+            //paging.PageSize = 3;
 
             var owners = dbOperation.GetCustomers() 
                                                
