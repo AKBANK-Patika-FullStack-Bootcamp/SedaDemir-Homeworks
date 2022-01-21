@@ -4,26 +4,26 @@
 
 ### APIAuthority Table Before
 
-[Auth-Table-Before](./img/apiAuth_table_empty.png)
+![Auth-Table-Before](./img/apiAuth_table_empty.png)
 
 ### Create login
 
-[Create-Login](./img/create_login.png)
+![Create-Login](./img/create_login.png)
 
 ### APIAuthority Table After
 
-[Auth-Table-After](./img/apiAuth-Table-After.png)
+![Auth-Table-After](./img/apiAuth-Table-After.png)
 
 ## Login Customer
 
 ### Select Bearer Token on Postman Authorization
 
-[Token](./img/bearer_token.pngimg/bearer_token.png)
+![Token](./img/bearer_token.pngimg/bearer_token.png)
 
 ### Login Failed
 
-[Login-Fail](./img/login_fail.png)
+![Login-Fail](./img/login_fail.png)
 
 ### Successful login for customer
 
-[Login-Success](./img/login_success.png)
+![Login-Success](./img/login_success.png)
