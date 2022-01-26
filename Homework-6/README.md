@@ -7,3 +7,7 @@
 ## Part 2
 
 ![Part-2 Output](./img/part2-output.png)
+
+## Part 3
+
+![Part-3 Output](./img/part3-output.png)
