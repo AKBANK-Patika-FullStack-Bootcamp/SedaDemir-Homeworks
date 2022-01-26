@@ -11,3 +11,7 @@
 ## Part 3
 
 ![Part-3 Output](./img/part3-output.png)
+
+## Bonus
+
+![Bonus Output](./img/bonus-output.png)
